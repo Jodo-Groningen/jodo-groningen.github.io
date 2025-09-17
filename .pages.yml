@@ -1,0 +1,29 @@
+media:
+  - name: images
+    label: Afbeeldingen
+    input: assets/images
+    output: /assets/images
+    categories: [ image ]
+content:
+  - name: config
+    label: Jekyll-configuratie
+    path: _config.yml
+    type: file
+    fields:
+      - name: title
+        label: Titel
+        type: string
+      - name: description
+        label: Beschrijving
+        type: string
+        description: Enkel gebruikt als een pagina geen eigen beschrijving heeft
+      - name: author
+        label: Auteur
+        type: string
+        description: Naam de vereniging
+      - name: email
+        label: E-mailadres
+        type: string
+      - name: lang
+        label: Taal
+        type: string
