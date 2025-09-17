@@ -1,0 +1,65 @@
+/**
+ * Grid
+ */
+.page {
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--grid-full)
+    [gallery-start] var(--grid-gallery)
+    [feature-start] var(--grid-feature)
+    [popout-start] var(--grid-popout)
+    [content-start content-left-start] var(--grid-column)
+    [content-left-end content-right-start] var(--grid-column)
+    [content-right-end content-end] var(--grid-popout)
+    [popout-end] var(--grid-feature)
+    [feature-end] var(--grid-gallery)
+    [gallery-end] var(--grid-full)
+    [full-end];
+  grid-template-rows: min-content;
+}
+
+/* Subgrids */
+.main-content {
+  display: inherit;
+  grid-template-columns: subgrid;
+  grid-auto-flow: inherit;
+  grid-column: full;
+}
+
+/* Grid Columns */
+.content,
+.main-content>* {
+  grid-column: content;
+}
+
+.gallery,
+.map,
+.site-header {
+  grid-column: gallery;
+}
+
+.feature,
+.events {
+  grid-column: feature;
+}
+
+.full,
+.cover,
+.site-footer {
+  grid-column: full;
+}
+
+.popout {
+  grid-column: popout;
+}
+
+.feature-start {
+  grid-column: feature-start / content-start;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: var(--gallery-grid-columns);
+}

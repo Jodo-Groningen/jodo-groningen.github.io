@@ -1,0 +1,36 @@
+@font-face {
+  font-display: swap;
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-weight: 100 900;
+  src: local("InterVariable"), url(/assets/fonts/Inter-Variable-subset.woff2) format("woff2") tech(variations);
+}
+@font-face {
+  font-display: swap;
+  font-family: "Inter Variable";
+  font-style: italic;
+  font-weight: 100 900;
+  src: local("InterVariableItalic"), url(/assets/fonts/Inter-VariableItalic-subset.woff2) format("woff2") tech(variations);
+}
+@font-face {
+  font-display: swap;
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 100 900;
+  src: local("EBGaramond-Regular"), url(/assets/fonts/EBGaramond-Variable-subset.woff2) format("woff2") tech(variations);
+}
+@font-face {
+  font-display: swap;
+  font-family: "EB Garamond";
+  font-style: italic;
+  font-weight: 100 900;
+  src: local("EBGaramond-Italic"), url(/assets/fonts/EBGaramond-VariableItalic-subset.woff2) format("woff2") tech(variations);
+}
+@font-face {
+  font-display: swap;
+  font-family: "M PLUS 1";
+  font-style: normal;
+  font-weight: 100 900;
+  src: local("MPLUS1-Regular"), url(/assets/fonts/MPLUS1-Variable-subset.woff2) format("woff2") tech(variations);
+  unicode-range: "U+4ec1, U+4eca, U+4fe1, U+53e4, U+5922, U+60f3, U+667a, U+6756, U+6d41, U+7167, U+793c, U+795e, U+7a3d, U+7fa9, U+9053";
+}

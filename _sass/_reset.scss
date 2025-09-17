@@ -1,0 +1,101 @@
+/* Use the border-box model */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Classless anchors get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Remove default margin */
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+ol,
+p,
+ul {
+  margin: 0;
+}
+
+/* Stretch body to small viewport height */
+body {
+  min-height: 100svh;
+}
+
+/* Inherit fonts for inputs and buttons */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* Balance header lines */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Improve typographic details */
+html {
+  hanging-punctuation: first last;
+  text-rendering: optimizeLegibility;
+  text-wrap: pretty;
+  writing-mode: horizontal-tb;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/**
+ * Make images easier to work with
+ * 1. Emphasise alt-text when the image cannot be displayed
+ * 2. Respect image aspect ratio
+ * 3. Prevent horizontal overflow
+ * 4. Remove whitespace added below inline-block image
+ */
+img,
+picture,
+svg,
+video {
+  font-style: italic;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+:where(ol, ul)[role="list"] {
+  list-style: none;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::after,
+  *::before {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

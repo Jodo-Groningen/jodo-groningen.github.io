@@ -1,0 +1,43 @@
+# Site information
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/README.md
+title: Shintō Musō-ryū Jōdō Groningen
+description: Jōdō Groningen is een vereniging van enthousiaste beoefenaars van Shintō Musō-ryū, een klassieke Japanse stokvechtkunst met 400 jaar historie
+author: Jōdō Groningen
+email: info@jodo-groningen.nl
+baseurl:
+lang: nl-NL
+
+# Build
+permalink: /:categories/:year/:month/:title
+sass:
+  sourcemap: development
+  style: compressed
+strict_front_matter: true
+timezone: Europe/Amsterdam
+
+# Compress HTML in Jekyll
+# https://github.com/penibelst/jekyll-compress-html
+compress_html:
+  clippings: all
+  comments: all
+  blanklines: false
+  profile: false
+  startings:
+  endings:
+
+# Plugins
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
+  - jekyll-default-layout
+
+optional_front_matter:
+  remove_originals: true
+titles_from_headings:
+  enabled: true
+  strip_title: false
+  collections: false
+relative_links:
+  enabled: true
+  collections: false

@@ -1,0 +1,6 @@
+---
+---
+User-agent: *
+Allow: /
+
+Sitemap: {{ page.url | absolute_url }}

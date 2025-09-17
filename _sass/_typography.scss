@@ -1,0 +1,173 @@
+/**
+ * Typography
+ */
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--sans-serif);
+  font-feature-settings: "cpsp";
+  font-size: var(--text-base);
+  font-synthesis: none;
+  font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+  line-height: var(--text-body-line-height);
+}
+
+
+/**
+ * Font families
+ */
+h1,
+h2 {
+  font-family: var(--serif);
+  font-variant-ligatures: common-ligatures contextual no-discretionary-ligatures;
+}
+
+
+/**
+ * Font weights
+ */
+h1,
+h2 {
+  font-weight: var(--semibold);
+}
+
+dt,
+h3,
+h4,
+th {
+  font-weight: var(--semibold);
+}
+
+
+/**
+ * Font styles
+ */
+address,
+q {
+  font-style: normal;
+}
+
+
+/**
+ * Font size & line heights
+ */
+caption,
+figcaption,
+.site-header,
+.site-footer {
+  font-size: var(--text-small);
+  line-height: var(--text-small-line-height);
+}
+
+h1 {
+  font-size: var(--text-title);
+  line-height: var(--text-title-line-height);
+}
+
+h2 {
+  font-size: var(--text-heading);
+  line-height: var(--text-heading-line-height);
+}
+
+h3 {
+  font-size: var(--text-subheading);
+  line-height: var(--text-subheading-line-height);
+}
+
+h4 {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+/**
+ * White-space
+ */
+blockquote {
+  border-inline-start: .25rem solid;
+  padding-block: .5rlh;
+  padding-inline-start: 1.75rem;
+}
+
+dd,
+ol,
+ul {
+  padding-inline-start: 2rem;
+}
+
+figure,
+iframe,
+h1,
+h2,
+section {
+  margin-block-start: 3rlh;
+}
+
+h3,
+h4 {
+  margin-block-start: 1rlh;
+}
+
+:where(address, dl, dt, figcaption, p, ol, table, ul) {
+  :not(figure, iframe, h1, h2, h4)+& {
+    margin-block-start: .5lh;
+  }
+
+  h2+& {
+    margin-block-start: 1rlh;
+  }
+
+  :where(figure, iframe)+& {
+    margin-block-start: 3rlh;
+  }
+}
+
+.main-content {
+  padding-block-end: 4.5rlh;
+}
+
+
+/**
+ * Text flow
+ */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+figcaption {
+  max-width: var(--measure);
+}
+
+/**
+ * Text decoration
+ */
+a,
+abbr {
+  text-decoration-line: underline;
+  text-underline-offset: .25em;
+}
+a {
+  text-decoration-style: solid;
+}
+abbr {
+  text-decoration-style: dotted;
+}
+
+/**
+ * Tabular numbers
+ */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/**
+ * Subhead
+ */
+.subhead {
+  font-size: var(--text-small);
+  line-height: var(--text-small-line-height);
+  margin-block-start: .5rlh;
+}

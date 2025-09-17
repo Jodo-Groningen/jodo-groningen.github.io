@@ -1,0 +1,21 @@
+.banner {
+  font-family: var(--sans-serif-ja);
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+
+  /* Small viewports */
+  font-size: var(--text-heading);
+  line-height: var(--text-heading-line-height);
+  margin: .5rlh 0 1rlh;
+}
+
+@media (min-width: 1024px) {
+  .banner {
+    align-content: end;
+    font-size: var(--text-title);
+    grid-column: feature-start / content-start;
+    grid-row: span 2;
+    line-height: var(--text-title-line-height);
+    writing-mode: vertical-rl;
+  }
+}

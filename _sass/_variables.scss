@@ -1,0 +1,89 @@
+/**
+ * Variables: All viewports
+ */
+:root {
+
+  /* Typography */
+  --sans-serif: "Inter Variable", system-ui, sans-serif;
+  --sans-serif-ja: "M PLUS 1", system-ui, sans-serif;
+  --serif: "EB Garamond", serif;
+
+  --text-small:                  0.875rem; /* 14px */
+  --text-logo:                   var(--text-small);
+  
+  --text-base:                   100%;     /* 16px */
+  --text-body:                   1rem;     /* 16px */
+  --text-subheading:             1.125rem; /* 18px */
+  --text-callout:                1.5rem;   /* 24px */
+  --text-heading:                2rem;     /* 32px */
+  --text-title:                  2.625rem; /* 42px */
+  
+  --text-single-line-height:     1.125rem;
+  --text-logo-line-height:       var(--text-single-line-height);
+  --text-small-line-height:      1.25rem;  /* 20px */
+  --text-body-line-height:       1.5rem;   /* 24px */
+  --text-subheading-line-height: 1.5rem;   /* 24px */
+  --text-callout-line-height:    1.75rem;  /* 28px */
+  --text-heading-line-height:    2.25rem;  /* 36px */
+  --text-title-line-height:      3rem;     /* 48px */
+
+  --measure: 36em;
+
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+
+
+  /* Grid */
+  --grid-gap: 1rlh;
+  --grid-margin: 1rem;
+  --grid-full: 1fr;
+  --grid-column: min(var(--measure) / 2, 50% - var(--grid-margin));
+  --grid-popout: 0;
+  --grid-feature: 0;
+  --grid-gallery: 0;
+
+
+  /* Gallery */
+  --gallery-grid-columns: 1fr;
+
+}
+
+
+/**
+ * Variables: Tablet (768px)
+ */
+@media screen and (min-width: 768px) {
+  :root {
+    --grid-popout: 3rem;
+    --gallery-grid-columns: repeat(2, 1fr);
+  }
+}
+
+
+/**
+ * Variables: Laptop (1024px)
+ */
+@media screen and (min-width: 1024px) {
+  :root {
+    --grid-popout: 3rem;
+    --grid-feature: 3rem;
+    --grid-gallery: 6rem;
+  }
+}
+
+
+/**
+ * Variables: Desktop (1280px)
+ */
+@media screen and (min-width: 1280px) {
+  :root {
+    --text-logo:             0.77778rem; /* 14px */
+    --text-logo-line-height: 1rem;       /* 18px */
+
+    html {
+      --text-base:           112.5%;     /* 18px */
+    }
+  }
+}

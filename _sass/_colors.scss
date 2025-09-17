@@ -1,0 +1,68 @@
+/**
+ * Theme
+ */
+:root {
+  --white: white;
+
+  --primary-color: #007d8e;
+  --secondary-color: #4a9f94;
+  --tertiary-color: #243551;
+  --primary-light-color: #f5f5f1;
+  --primary-dark-color: #003239;
+
+  --accent1-color: #6eb275;
+  --accent2-color: #1f7fb2;
+  --accent3-color: #699232;
+  --accent4-color: #7cb2a2;
+  --accent5-color: #cecf2a;
+  --accent6-color: #1a5a75;
+
+  --text-color: var(--primary-dark-color);
+  --link-color: var(--primary-color);
+  --link-active-color: var(--text-color);
+  --link-visited-color: var(--text-color);
+
+  --background-color: var(--white);
+}
+
+/**
+ * Background colors
+ */
+body {
+  background-color: var(--background-color);
+}
+
+.site-header,
+.main-content {
+  background-color: var(--background-color);
+}
+
+.site-footer {
+  background-color: var(--primary-dark-color);
+}
+
+/**
+ * Colors
+ */
+body {
+  color: var(--text-color);
+}
+
+blockquote {
+  border-inline-start-color: var(--accent4-color);
+}
+h3 {
+  color: var(--primary-color);
+}
+
+a,
+a:link {
+  color: var(--link-color);
+}
+a:hover,
+a:active {
+  color: var(--link-active-color);
+}
+a:visited {
+  color: var(--link-visited-color);
+}

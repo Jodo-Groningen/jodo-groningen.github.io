@@ -1,0 +1,35 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+  justify-content: space-between;
+  font-size: var(--text-small);
+  line-height: var(--text-small-line-height);
+  padding-block: .5lh 1lh;
+  row-gap: 1lh;
+}
+.site-logo-link:any-link {
+  align-items: center;
+  color: currentColor;
+  display: flex;
+  text-decoration-line: none;
+  text-transform: uppercase;
+
+  p {
+    margin-block-start: 0;
+    margin-inline-start: 1em;
+    max-width: 10ch;
+    padding-block-start: .5lh;
+  }
+  svg {
+    fill: var(--secondary-color);
+  }
+  strong {
+    color: var(--primary-color);
+  }
+}
+.site-menu {
+  color: var(--primary-color);
+  font-weight: var(--medium);
+  padding-block-start: .5lh;
+}

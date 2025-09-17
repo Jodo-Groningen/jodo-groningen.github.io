@@ -1,0 +1,28 @@
+/**
+ * Tables
+ */
+table {
+  border-collapse: collapse;
+/*  border-collapse: separate;*/
+  caption-side: bottom;
+}
+
+caption, td, th {
+  text-align: start;
+}
+
+caption {
+  padding-block-start: .5rlh;
+}
+
+td, th {
+  border-block-end: 1px solid currentColor;
+  border-inline: .25rem solid transparent;
+  padding-block: .375rem;
+  padding-inline: .5rlh;
+}
+
+thead :where(td, th) {
+  border-block-end-width: 2px;
+  padding-block-start: .3125rem;
+}
