@@ -1,0 +1,29 @@
+{%- assign date = include.date -%}
+{%- assign locale = site.data.locales[site.locale] -%}
+{%- assign format = locale.date_formats[include.format] | default: include.format -%}
+
+{%- comment %}
+Translate full month
+{%- endcomment -%}
+{%- assign month = date | date: '%B' -%}
+{%- assign format = format | replace: '%B', locale.months[month] -%}
+
+{%- comment %}
+Translate abbreviated month
+{%- endcomment -%}
+{%- assign abbreviated_month = date | date: '%b' -%}
+{%- assign format = format | replace: '%b', locale.abbreviated_months[abbreviated_month] -%}
+
+{%- comment %}
+Translate full day
+{%- endcomment -%}
+{%- assign day = date | date: '%A' -%}
+{%- assign format = format | replace: '%A', locale.days[day] -%}
+
+{%- comment %}
+Translate abbreviated day
+{%- endcomment -%}
+{%- assign abbreviated_day = date | date: '%a' -%}
+{%- assign format = format | replace: '%a', locale.abbreviated_days[abbreviated_day] -%}
+
+{{ date | date: format }}

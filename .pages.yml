@@ -13,17 +13,53 @@ content:
       - name: title
         label: Titel
         type: string
+        options:
+          maxlength: 80
       - name: description
         label: Beschrijving
         type: string
         description: Enkel gebruikt als een pagina geen eigen beschrijving heeft
+        options:
+          maxlength: 160
       - name: author
         label: Auteur
         type: string
         description: Naam de vereniging
+        options:
+          maxlength: 80
       - name: email
         label: E-mailadres
         type: string
-      - name: lang
-        label: Taal
+        options:
+          maxlength: 80
+  - name: events
+    label: Agenda
+    path: _data/events.yaml
+    type: file
+    fields:
+      - name: name
+        label: Omschrijving
         type: string
+        options:
+          maxlength: 80
+      - name: starts_at
+        label: Van
+        type: date
+        options:
+          time: true
+          format: yyyy-MM-ddTHH:mm
+      - name: ends_at
+        label: Tot
+        type: date
+        options:
+          time: true
+          format: yyyy-MM-ddTHH:mm
+      - name: address
+        label: Adres
+        type: string
+        options:
+          maxlength: 120
+    view:
+      fields: [ name, starts_at ]
+      primary: name
+      sort: [ starts_at, name ]

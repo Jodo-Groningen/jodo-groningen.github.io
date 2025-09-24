@@ -5,7 +5,9 @@ description: Jōdō Groningen is een vereniging van enthousiaste beoefenaars van
 author: Jōdō Groningen
 email: info@jodo-groningen.nl
 baseurl:
+encoding: UTF-8
 lang: nl-NL
+locale: nl-NL
 
 # Build
 permalink: /:categories/:year/:month/:title

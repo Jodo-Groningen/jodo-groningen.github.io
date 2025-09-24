@@ -2,105 +2,72 @@
   <h2>Agenda</h2>
   <p class="subhead">Aankomende seminars en activiteiten voor <i>jōdō</i> in Nederland</p>
   <p>De tweewekelijkse <i>keikokai</i> 稽古会 (centrale trainingen) in Groningen en Amsterdam zijn open voor alle niveaus&hairsp;—&hairsp;ook voor beginners. Neem gerust <a href="mailto:info@jodo-groningen.nl">contact</a> op als je eens wilt meedoen, je bent van harte welkom!</p>
-  <ul class="events-list">
-    <li class="event groningen">
-      <div class="event-date">
-        <span class="event-day">22</span>
-        <span class="event-month">sep</span>
-      </div>
-      <div class="event-details">
-        <h3>Open les Jōdō Groningen</h3>
-        <p>Maandag 22 september&ensp;19.00&thinsp;–&thinsp;21.00 uur</p>
-        <p>Kluiverboom 1c, Groningen</p>
-      </div>
-    </li>
-    <li class="event amsterdam">
-      <div class="event-date">
-        <span class="event-day">5</span>
-        <span class="event-month">okt</span>
-      </div></div>
-      <div class="event-details">
-        <h3>Keikokai Amsterdam</h3>
-        <p>Zondag 5 oktober&ensp;10.00&thinsp;–&thinsp;13.00 uur</p>
-        <p>Lodewijk van Deijsselstraat 107, Amsterdam</p>
-      </div>
-    </li>
-    <li class="event groningen">
-      <div class="event-date">
-        <span class="event-day">18</span>
-        <span class="event-month">okt</span>
-      </div>
-      <div class="event-details">
-        <h3>Keikokai Groningen</h3>
-        <p>Zaterdag 18 oktober&ensp;13.30&thinsp;–&thinsp;16.30 uur</p>
-        <p>Kluiverboom 1c, Groningen</p>
-      </div>
-    </li>
-    <li class="event other">
-      <div class="event-date">
-        <span class="event-day">25&thinsp;–&thinsp;26</span>
-        <span class="event-month">okt</span>
-      </div>
-      <div class="event-details">
-        <h3>6th Ravensburg Gasshuku, Jan Gerrit Post & Cédric Russo</h3>
-        <p>Zaterdag 25 t/m zondag 26 oktober</p>
-        <p>Schule Ravensburg-Oberzell, Duitsland</p>
-      </div>
-    </li>
-    <li class="event amsterdam">
-      <div class="event-date">
-        <span class="event-day">2</span>
-        <span class="event-month">nov</span>
-      </div></div>
-      <div class="event-details">
-        <h3>Keikokai Amsterdam</h3>
-        <p>Zondag 2 november&ensp;10.00&thinsp;–&thinsp;13.00 uur</p>
-        <p>Lodewijk van Deijsselstraat 107, Amsterdam</p>
-      </div>
-    </li>
-    <li class="event groningen">
-      <div class="event-date">
-        <span class="event-day">8</span>
-        <span class="event-month">nov</span>
-      </div>
-      <div class="event-details">
-        <h3>Keikokai Groningen</h3>
-        <p>Zaterdag 8 november&ensp;13.30&thinsp;–&thinsp;16.30 uur</p>
-        <p>Kluiverboom 1c, Groningen</p>
-      </div>
-    </li>
-    <li class="event other">
-      <div class="event-date">
-        <span class="event-day">30</span>
-        <span class="event-month">nov</span>
-      </div>
-      <div class="event-details">
-        <h3>Districtstage JBN Zuid-Nederland, Jan Gerrit Post & Christiaan Zandt</h3>
-        <p>Zondag 30 november&ensp;10.00&thinsp;–&thinsp;13.00 uur</p>
-        <p>Prins Willem Alexander Sportpark, Veghel</p>
-      </div>
-    </li>
-    <li class="event amsterdam">
-      <div class="event-date">
-        <span class="event-day">7</span>
-        <span class="event-month">dec</span>
-      </div></div>
-      <div class="event-details">
-        <h3>Keikokai Amsterdam</h3>
-        <p>Zondag 7 december&ensp;10.00&thinsp;–&thinsp;13.00 uur</p>
-        <p>Lodewijk van Deijsselstraat 107, Amsterdam</p>
-      </div>
-    </li>
-    <li class="event groningen">
-      <div class="event-date">
-        <span class="event-day">20</span>
-        <span class="event-month">dec</span>
-      </div>
-      <div class="event-details">
-        <h3>Keikokai Groningen</h3>
-        <p>Zaterdag 20 december&ensp;13.30&thinsp;–&thinsp;16.30 uur</p>
-        <p>Kluiverboom 1c, Groningen</p>
-      </div>
-    </li>
-  </ul>
+
+  {% assign now = 'now' | date_to_xmlschema %}
+  {% assign events = site.data.events | sort: 'starts_at' %}
+  {% if events %}
+    <ul class="events-list">
+
+      {% for event in events %}
+        {% assign starts_at = event.starts_at | date_to_xmlschema %}
+
+        {% if starts_at < now %}
+          {% continue %}
+        {% endif %}
+
+        {% assign ends_at = event.ends_at | date_to_xmlschema %}
+        {% assign starts_at_month = event.starts_at | date: '%m' %}
+        {% assign ends_at_month = event.ends_at | date: '%m' %}
+        {% assign starts_at_day = event.starts_at | date: '%-d' %}
+        {% assign ends_at_day = event.ends_at | date: '%-d' %}
+        {% assign starts_at_format = '%A %-d %B' %}
+        {% assign ends_at_format = '%A %-d %B' %}
+        {% assign separator = ' t/m ' %}
+
+        {% if starts_at_day == ends_at_day %}
+          {% assign starts_at_format = '%A %-d %B&ensp;%R' %}
+          {% assign ends_at_format = '%R' %}
+          {% assign separator = '&thinsp;–&thinsp;' %}
+        {% elsif starts_at_month == ends_at_month %}
+          {% assign starts_at_format = '%A %-d' %}
+        {% endif %}
+
+        {% capture datetime %}
+          {% capture i18n_starts_at %}
+            {%- include i18n/date date=event.starts_at format=starts_at_format -%}
+          {% endcapture %}
+          <time datetime="{{ starts_at }}">
+            {{- i18n_starts_at | capitalize -}}
+          </time>
+          {{- separator -}}
+          <time datetime="{{ ends_at }}">
+            {%- include i18n/date date=ends_at format=ends_at_format -%}
+          </time>
+        {% endcapture %}
+
+        {% capture location %}
+          {% assign location = event.address | split: ', ' | last %}
+          {% if location == 'Groningen' or location == 'Amsterdam' %}
+            {{ location | downcase }}
+          {%- else -%}
+            other
+          {%- endif -%}
+        {% endcapture %}
+
+        <li class="event {{ location }}">
+          <div class="event-date">
+            <span class="event-day">{{ starts_at_day }}</span>
+            <span class="event-month">{% include i18n/date date=event.starts_at format='%b' %}</span>
+          </div>
+          <div class="event-details">
+            <h3>{{ event.name }}</h3>
+            <p>{{ datetime }}</p>
+            <p>{{ event.address }}</p>
+          </div>
+        </li>
+      {% endfor %}
+
+    </ul>
+  {% endif %}
+
 </section>
