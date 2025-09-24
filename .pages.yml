@@ -36,6 +36,8 @@ content:
     label: Agenda
     path: _data/events.yaml
     type: file
+    format: yaml
+    list: true
     fields:
       - name: name
         label: Omschrijving
