@@ -37,10 +37,7 @@ content:
     path: _data/events.yaml
     type: file
     format: yaml
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{name} · {starts_at}" # Template string using field values and {index}
+    list: true
     fields:
       - name: name
         label: Omschrijving
