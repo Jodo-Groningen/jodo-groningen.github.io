@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: {{ page.url | absolute_url }}
+Sitemap: {{ 'sitemap.xml' | absolute_url }}
