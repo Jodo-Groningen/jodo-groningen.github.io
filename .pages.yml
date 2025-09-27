@@ -61,7 +61,3 @@ content:
         type: string
         options:
           maxlength: 120
-    view:
-      fields: [ name, starts_at ]
-      primary: name
-      sort: [ starts_at, name ]
