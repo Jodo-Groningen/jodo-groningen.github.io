@@ -79,11 +79,8 @@
  */
 @media screen and (min-width: 1280px) {
   :root {
+    --text-base:           112.5%;     /* 18px */
     --text-logo:             0.77778rem; /* 14px */
     --text-logo-line-height: 1rem;       /* 18px */
-
-    html {
-      --text-base:           112.5%;     /* 18px */
-    }
   }
 }
