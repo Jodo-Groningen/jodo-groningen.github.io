@@ -87,7 +87,7 @@ Je kunt je auto parkeren op de parkeerplaats voor CSG Kluiverboom. Je fiets kun 
 Andere aanverwante _jōdō_-groepen waar je in Nederland kunt trainen vind je in [Amsterdam](https://www.shin-shinbuken.nl "Budovereniging Shin-ShinBuKen Amsterdam"){:target="_blank"}, [Helmond](https://www.jodo-helmond.nl "Jodo Helmond"){:target="_blank"} en [Schiedam](https://budokai-ibuki.nl/ "Budokai Ibuki"){:target="_blank"}. De <abbr title="Fédération européenne de Jōdō">FEJ</abbr> heeft een overzicht van alle aangesloten [_jōdō_-groepen in Europa](https://fej.ch/en/dojo.htm){:target="_blank"}.
 
 <iframe allowfullscreen class="map" frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-  src="https://maps.googleapis.com/maps/embed/v1/place?key=${{ secrets.GOOGLE_MAPS_API_KEY }}&q=place_id:ChIJjcOGKazSyUcR1p4E9ETbMIw&zoom=13"
+  src="https://maps.googleapis.com/maps/embed/v1/place?key=${{ env.GOOGLE_MAPS_API_KEY }}&q=place_id:ChIJjcOGKazSyUcR1p4E9ETbMIw&zoom=13"
   title="Google Maps-kaart met de trainingslocatie van Jōdō Groningen">
 </iframe>
 
