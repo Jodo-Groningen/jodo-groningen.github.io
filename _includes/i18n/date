@@ -26,4 +26,4 @@ Translate abbreviated day
 {%- assign abbreviated_day = date | date: '%a' -%}
 {%- assign format = format | replace: '%a', locale.abbreviated_days[abbreviated_day] -%}
 
-{{ date | date: format }}
+{{ date | date: format -}}
