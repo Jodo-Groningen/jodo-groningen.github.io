@@ -21,11 +21,11 @@
         {% assign starts_at_day = event.starts_at | date: '%-d' %}
         {% assign ends_at_day = event.ends_at | date: '%-d' %}
         {% assign starts_at_format = '%A %-d %B' %}
-        {% assign ends_at_format = '%A %-d %B' %}
+        {% assign ends_at_format = '%A %-d %B %Y' %}
         {% assign separator = ' t/m ' %}
 
         {% if starts_at_day == ends_at_day %}
-          {% assign starts_at_format = '%A %-d %B&ensp;%R' %}
+          {% assign starts_at_format = '%A %-d %B %Y&ensp;%R' %}
           {% assign ends_at_format = '%R' %}
           {% assign separator = '&thinsp;–&thinsp;' %}
         {% elsif starts_at_month == ends_at_month %}
