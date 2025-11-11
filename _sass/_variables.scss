@@ -3,13 +3,13 @@
  */
 :root {
 
-  /* Typography */
+  /* Font faces */
   --sans-serif: "Inter Variable", system-ui, sans-serif;
   --sans-serif-ja: "M PLUS 1", system-ui, sans-serif;
   --serif: "EB Garamond", serif;
 
+  /* Font sizes */
   --font-size: 100%;
-
   --font-size-small:         .875rem;     /* 14 */
   --font-size-body:         1rem;         /* 16 */
   --font-size-subheading:   1.125rem;     /* 18 */
@@ -17,6 +17,7 @@
   --font-size-heading:      2rem;         /* 32 */
   --font-size-title:        2.625rem;     /* 42 */
   
+  /* Line heights */
   --line-height-single:      .75rlh;      /* 18 */
   --line-height-small:       .8333333rlh; /* 20 */
   --line-height-body:       1.5;          /* 24 */
@@ -25,16 +26,18 @@
   --line-height-heading:    1.5rlh;       /* 36 */
   --line-height-title:      2rlh;         /* 48 */
   
-  --font-size-logo: var(--font-size-small);
-  --line-height-logo: var(--line-height-single);
-
-  --measure: 36em;
-
+  /* Font weights */
   --regular: 400;
   --medium: 500;
   --semibold: 600;
   --bold: 700;
 
+  /* Logo */
+  --font-size-logo: var(--font-size-small);
+  --line-height-logo: var(--line-height-single);
+
+  /* Measure */
+  --measure: 36em;
 
   /* Grid */
   --grid-gap: 1rlh;
@@ -45,10 +48,8 @@
   --grid-feature: 0;
   --grid-gallery: 0;
 
-
   /* Gallery */
   --gallery-grid-columns: 1fr;
-
 }
 
 
