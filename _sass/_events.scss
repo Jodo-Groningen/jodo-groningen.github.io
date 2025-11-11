@@ -38,13 +38,13 @@
   width: 7rem;
 }
 .event-day {
-  font-size: var(--text-callout);
-  line-height: var(--text-callout-line-height);
+  font-size: var(--font-size-callout);
+  line-height: var(--line-height-callout);
 }
 .event-month {
-  font-size: var(--text-small);
+  font-size: var(--font-size-small);
   font-weight: var(--medium);
-  line-height: var(--text-small-line-height);
+  line-height: var(--line-height-small);
   text-transform: uppercase;
 }
 .event-details {
@@ -57,16 +57,16 @@
   }
   h3 {
     color: currentColor;
-    font-size: var(--text-subheading);
-    line-height: var(--text-subheading-line-height);
+    font-size: var(--font-size-subheading);
+    line-height: var(--line-height-subheading);
   }
 
   h3 {
-    font-size: var(--text-body);
-    line-height: var(--text-body-line-height);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
   }
   p {
-    font-size: var(--text-small);
-    line-height: var(--text-small-line-height);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
   }
 }

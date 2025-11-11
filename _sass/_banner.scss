@@ -4,18 +4,18 @@
   font-variation-settings: "wght" 900;
 
   /* Small viewports */
-  font-size: var(--text-heading);
-  line-height: var(--text-heading-line-height);
+  font-size: var(--font-size-heading);
+  line-height: var(--line-height-heading);
   margin: .5rlh 0 1rlh;
 }
 
 @media (min-width: 1024px) {
   .banner {
     align-content: end;
-    font-size: var(--text-title);
+    font-size: var(--font-size-title);
     grid-column: feature-start / content-start;
     grid-row: span 2;
-    line-height: var(--text-title-line-height);
+    line-height: var(--line-height-title);
     writing-mode: vertical-rl;
   }
 }

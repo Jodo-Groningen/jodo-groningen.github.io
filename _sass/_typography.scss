@@ -6,10 +6,10 @@ html {
   -webkit-font-smoothing: antialiased;
   font-family: var(--sans-serif);
   font-feature-settings: "cpsp";
-  font-size: var(--text-base);
+  font-size: var(--font-size);
   font-synthesis: none;
   font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
-  line-height: var(--text-body-line-height);
+  line-height: var(--line-height-body);
 }
 
 
@@ -55,23 +55,23 @@ caption,
 figcaption,
 .site-header,
 .site-footer {
-  font-size: var(--text-small);
-  line-height: var(--text-small-line-height);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
 }
 
 h1 {
-  font-size: var(--text-title);
-  line-height: var(--text-title-line-height);
+  font-size: var(--font-size-title);
+  line-height: var(--line-height-title);
 }
 
 h2 {
-  font-size: var(--text-heading);
-  line-height: var(--text-heading-line-height);
+  font-size: var(--font-size-heading);
+  line-height: var(--line-height-heading);
 }
 
 h3 {
-  font-size: var(--text-subheading);
-  line-height: var(--text-subheading-line-height);
+  font-size: var(--font-size-subheading);
+  line-height: var(--line-height-subheading);
 }
 
 h4 {
@@ -167,7 +167,7 @@ abbr {
  * Subhead
  */
 .subhead {
-  font-size: var(--text-small);
-  line-height: var(--text-small-line-height);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
   margin-block-start: .5rlh;
 }
